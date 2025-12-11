@@ -2,6 +2,13 @@
 
 A full-stack web application for managing multi-resource bookings at a sports facility. Users can book courts, rent equipment, and hire coaches in atomic transactions with dynamic pricing and waitlist management.
 
+## Deployed Links
+
+- Frontend (Vercel): https://booking-court-app.vercel.app/
+- Backend API (Render): https://booking-court-app.onrender.com/api/
+
+> Note: The frontend uses `REACT_APP_API_BASE` at build time if set (Vercel environment variable). If not set, it falls back to the Render API URL above.
+
 ## Features
 
 ### 1. Multi-Resource Booking

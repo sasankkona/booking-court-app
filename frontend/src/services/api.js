@@ -1,6 +1,14 @@
 import axios from 'axios';
 
-const API_BASE = 'https://booking-court-app.onrender.com';
+// API base: prefer `REACT_APP_API_BASE` (set in Vercel) otherwise default to deployed Render API.
+// `REACT_APP_API_BASE` may be provided with or without a trailing `/api` — normalize accordingly.
+const _raw = process.env.REACT_APP_API_BASE;
+const API_BASE = (() => {
+  const DEFAULT = 'https://booking-court-app.onrender.com/api';
+  if (!_raw) return DEFAULT;
+  const trimmed = _raw.replace(/\/$/, '');
+  return trimmed.endsWith('/api') ? trimmed : `${trimmed}/api`;
+})();
 
 export const api = {
   courts: {
