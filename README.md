@@ -95,7 +95,7 @@ Rules supported:
 
 3. **Create `.env` file**:
    ```env
-   MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/booking?retryWrites=true&w=majority
+   MONGO_URI=your mongo url
    PORT=5001
    ```
    > **Note**: Port 5001 is used to avoid conflicts with macOS AirPlay on port 5000.
