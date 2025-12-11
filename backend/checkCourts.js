@@ -1,6 +1,7 @@
 const http = require('http');
 
-http.get('http://localhost:5000/api/courts', (res) => {
+// Hit deployed Render backend courts endpoint
+http.get('https://booking-court-app.onrender.com/api/courts', (res) => {
   console.log('STATUS', res.statusCode);
   console.log('HEADERS', JSON.stringify(res.headers, null, 2));
   let data = '';
